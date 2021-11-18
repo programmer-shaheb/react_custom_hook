@@ -1,17 +1,12 @@
-import { useState } from "react";
 import "./App.css";
-import CopyButton from "./UI/CopyButton";
+import InputValueCopy from "./components/InputValueCopy";
+import ScrollBottom from "./components/ScrollBottom";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
-
   return (
     <div className="App">
-      <input
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <CopyButton code={inputValue} />
+      <InputValueCopy />
+      <ScrollBottom />
     </div>
   );
 }
